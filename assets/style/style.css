@@ -1,8 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+::-moz-selection {
+  color: white;
+  background: #503d5c;
+}
+
+::selection {
+  color: white;
+  background: #503d5c;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: Poppins;
+  -webkit-perspective: 100%;
+          perspective: 100%;
 }
 
 #main {
@@ -21,6 +33,8 @@
 }
 
 .glass-container {
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
   height: 80vh;
   width: 60%;
   background: rgba(255, 255, 255, 0.25);

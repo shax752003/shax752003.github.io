@@ -1,6 +1,6 @@
 project = document.getElementById('project');
 async function getProjects() {
-    const data = await fetch('https://raw.githubusercontent.com/shax752003/shax752003.github.io/main/assets/js/projects.json');
+    const data = await fetch('http://127.0.0.1:5500/assets/js/projects.json');
     const obj = await data.json()
     for (let i = 0; i < obj.length; i++) {
         const element = obj[i];
@@ -8,7 +8,7 @@ async function getProjects() {
         <table>
             <tbody>
                 <tr>
-                    <td class="project-details">
+                    <td class="project-details pop">
                         <a class="project-link" href="${element.link}" target="_blank">
                             <p>${element.description} <iconify-icon icon="iconoir:link" style="color: #503d5c;"></iconify-icon></p>
                         </a>
